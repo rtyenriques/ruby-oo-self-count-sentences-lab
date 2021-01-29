@@ -3,31 +3,24 @@ require 'pry'
 class String
 
   def sentence?
-    if self[-1] == "."
-      true
-    else
-      false
-    end
+    self[-1] == "."
   end
 
   def question?
-   if self[-1] == "?"
-    true
-   else
-    false
-   end
+    self[-1] == "?"
   end
 
   def exclamation?
-    if self[-1] == "!"
-      true
-    else
-      false
-    end
+    self[-1] == "!"
   end
 
   def count_sentences
-   self.split(/[.!?]/).reject {|x| x.empty?}.size
+    
+   self.split(/[.!?]/).reject {|x| x.empty?}.count
+
   
+
   end
+
+  
 end
